@@ -154,6 +154,12 @@
         }
 
         /* 標題字 */
+        h1 {
+            font-size: 2rem;
+            color: #32435f;
+            font-weight: 500;
+        }
+
         h2 {
             position: absolute;
             width: 20%;
@@ -291,6 +297,7 @@
             h2 {
                 margin-top: 60px;
             }
+
             .navbar ul {
                 font-size: 1rem;
             }
@@ -299,6 +306,7 @@
                 width: 140%;
                 left: 22%;
             }
+
             .mysvg {
                 width: 100%;
             }
@@ -343,6 +351,69 @@
         .sticky {
             position: fixed;
             top: 0;
+        }
+
+        .main {
+            padding: 0 400px;
+        }
+
+        .partTitle {
+            font-size: 3rem;
+            color: #eb9772;
+            font-weight: 800;
+            padding: 0 50px;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .box {
+            width: 100%;
+            height: 170px;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 50px;
+        }
+
+        .photo {
+            width: 300px;
+            height: 300px;
+            background: url(images/photo.png) no-repeat;
+            background-size: contain;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .name p {
+            padding: 40px 0;
+            line-height: 30px;
+            letter-spacing: 3px;
+            color: #22202f;
+            font-size: 1.2rem;
+        }
+
+        .nameDetail {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .padding20 {
+            padding: 20px 0;
+        }
+        .namectr{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content:space-between;
         }
     </style>
 
@@ -417,13 +488,33 @@
             </div>
 
         </div>
-        <div class="navbar" id="main02">
+        <div class="navbar">
             <ul>
                 <li><a id="home" href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a id="about" href="#">About</a></li>
                 <li><a href="#">portfolio</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
+        </div>
+        <div class="box" id="main02"></div>
+        <div class="main">
+            <div class="about">
+                <div class="title">
+                    <div class="partTitle">About me</div>
+                </div>
+                <div class="box"></div>
+                <div class="namectr">
+                    <div class="name">
+                        <div class="nameDetail">
+                            <h1 class="padding20">林妍均 Chryatine Lin</h1>
+                            <p>國立臺北藝術大學(台灣)<br>
+                                術(美術學相關)學系<br>
+                                2012／09～2016／02(畢業)<br></p>
+                        </div>
+                        <div class="photo"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -437,6 +528,11 @@
         // 滑動到指定目標---------------------------------
         $(document).ready(function () {
             $("#go01").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#main02").offset().top
+                }, 1000);
+            });
+            $("#about").click(function () {
                 $('html, body').animate({
                     scrollTop: $("#main02").offset().top
                 }, 1000);
@@ -471,8 +567,9 @@
         });
 
         // start動畫-----------------------------------------
-        TweenMax.from("#go01", 0.8, { opacity: 0, delay: 1 });
-        TweenMax.to("#go01", 0.8, { y: 10, repeat: -1, yoyo: true, ease: Power0.easeNone });
+
+        TweenMax.from("#go01", 0.8, { delay: 2, });
+        TweenMax.to("#go01", 0.8, { y: 10, repeat: -1, yoyo: true, ease: Power0.easeNone, opacity: 0.5 });
 
     </script>
 </body>
