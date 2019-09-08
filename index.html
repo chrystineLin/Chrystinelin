@@ -427,6 +427,10 @@
             right: 40px;
             bottom: 40px;
         }
+        .top a:hover{
+            opacity: 0.6;
+            transition: 0.8s;
+        }
 
         .hideUp {
             top: -60px;
@@ -595,6 +599,8 @@
 
         // 回到頂部------------------------------------------------
 
+        var gotop =  $('#gotop')
+
         $(function () {
             /* 按下GoTop按鈕時的事件 */
             $('#gotop').click(function () {
@@ -603,6 +609,11 @@
             });
 
             /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+
+            if($(window).height() > 1){
+                $('#gotop').hide();
+            }
+
             $(window).scroll(function () {
                 if ($(this).scrollTop() > 600) {
                     $('#gotop').fadeIn();
