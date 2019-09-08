@@ -240,6 +240,7 @@
                 bottom: 0;
                 font-size: 1.3rem;
                 background-color: #32435f00;
+
             }
 
             .navbar ul {
@@ -411,10 +412,24 @@
         .padding20 {
             padding: 20px 0;
         }
-        .namectr{
+
+        .namectr {
             display: flex;
             flex-direction: row-reverse;
-            justify-content:space-between;
+            justify-content: space-between;
+        }
+
+        .top a {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background: url(images/top.png) no-repeat;
+            right: 40px;
+            bottom: 40px;
+        }
+
+        .hideUp {
+            top: -60px;
         }
     </style>
 
@@ -498,6 +513,7 @@
             </ul>
         </div>
         <div class="box" id="main02"></div>
+        <div class="top"><a id="gotop" href="#"></a></div>
         <div class="main">
             <div class="about">
                 <div class="title">
@@ -567,10 +583,35 @@
 
         });
 
-        // start動畫-----------------------------------------
+        // 動畫-----------------------------------------
 
-        TweenMax.from("#go01", 0.8, { delay: 2, });
+        TweenMax.from("#go01", 0.8, { "display": "none", delay: 5.5 });
         TweenMax.to("#go01", 0.8, { y: 10, repeat: -1, yoyo: true, ease: Power0.easeNone, opacity: 0.5 });
+
+        TweenMax.from(".hr", 2, { width: 0, });
+        TweenMax.to(".hr", 4, { width: "100%", });
+
+        TweenMax.from("h2", 2, { opacity: 0, delay: 5 });
+
+        // 回到頂部------------------------------------------------
+
+        $(function () {
+            /* 按下GoTop按鈕時的事件 */
+            $('#gotop').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 'slow');   /* 返回到最頂上 */
+                return false;
+            });
+
+            /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 600) {
+                    $('#gotop').fadeIn();
+                }
+                else {
+                    $('#gotop').fadeOut();
+                }
+            });
+        });
 
     </script>
 </body>
