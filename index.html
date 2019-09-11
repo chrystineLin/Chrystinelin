@@ -172,6 +172,20 @@
             color: #32435f;
         }
 
+        h3 {
+            font-size: 1.5rem;
+            color: #eb9772;
+            font-weight: 600;
+        }
+
+        .word {
+            line-height: 30px;
+            letter-spacing: 3px;
+            color: #32435f;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
         .navbar {
             width: 100%;
             height: 60px;
@@ -215,6 +229,32 @@
             left: 45%;
         }
 
+        .exp {}
+
+        .exp1 {
+            background: #eb967257;
+            padding: 40px;
+            margin: 10px 0;
+            border-radius: 10px;
+            width:300px;
+        }
+
+        .learn {
+            border: #eb9672a9 2px solid;
+            border-radius: 50%;
+            padding: 40px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .flex{
+            display:flex;
+            justify-content: space-between;
+        }
+        /* RWD================================================= */
 
         @media (max-width: 767px) {
             .container {
@@ -326,6 +366,7 @@
 
         @media (min-width: 1200px) {}
 
+        /* RWD================================================= */
 
         #lightning {
             opacity: 0;
@@ -427,7 +468,8 @@
             right: 40px;
             bottom: 40px;
         }
-        .top a:hover{
+
+        .top a:hover {
             opacity: 0.6;
             transition: 0.8s;
         }
@@ -529,11 +571,50 @@
                         <div class="nameDetail">
                             <h1 class="padding20">林妍均&nbsp;&nbsp;&nbsp; Chryatine Lin</h1>
                             <p>國立臺北藝術大學(台灣)<br>
-                                術(美術學相關)學系<br>
+                                美術學系 複合媒材組<br>
                                 2012／09～2016／02(畢業)<br></p>
                         </div>
                         <div class="photo"></div>
                     </div>
+                </div>
+                <div class="box"></div>
+                <div class="other">
+                    <h3>經歷</h3>
+                    <div class="box2"></div>
+                    <div class="flex">
+                        <div class="exp">
+                            <div class="exp1 word">
+                                美術編輯/礎石室內裝修有限公司<br>
+                                2017/11～2019/03
+                            </div>
+                            <div class="exp1 word">
+                                影片剪輯工讀/台北藝術大學<br>
+                                2013/03～2015/02
+                            </div>
+                        </div>
+                        <div class="learn word">
+                            資策會<br>
+                            互動式網站UI/UX<br>
+                            設計師就業養成班<br>
+                            MMMH55期<br>
+                            2019/03~2019/08
+                        </div>
+                    </div>
+                    <div class="tool">
+                        <div class="tool1"></div>
+                        <div class="tool1"></div>
+                    </div>
+                    <div class="othertools">
+
+                    </div>
+                    <div class="interest">
+                    </div>
+                </div>
+                <div class="portfolio">
+
+                </div>
+                <div class="contacts">
+
                 </div>
             </div>
         </div>
@@ -599,7 +680,7 @@
 
         // 回到頂部------------------------------------------------
 
-        var gotop =  $('#gotop')
+        var gotop = $('#gotop')
 
         $(function () {
             /* 按下GoTop按鈕時的事件 */
@@ -610,7 +691,7 @@
 
             /* 偵測卷軸滑動時，往下滑超過400px就讓GoTop按鈕出現 */
 
-            if($(window).height() > 1){
+            if ($(window).height() > 1) {
                 $('#gotop').hide();
             }
 
