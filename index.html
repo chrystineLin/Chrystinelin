@@ -183,7 +183,7 @@
             letter-spacing: 3px;
             color: #32435f;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 550;
         }
 
         .navbar {
@@ -228,6 +228,7 @@
             top: 82%;
             left: 45%;
         }
+
         #lightning {
             opacity: 0;
         }
@@ -337,16 +338,18 @@
         .hideUp {
             top: -60px;
         }
-        .tool{
+
+        .tool {
             display: flex;
 
         }
-        .tool1{
+
+        .tool1 {
             background: #eb967257;
             padding: 40px;
             margin: 10px 0;
             border-radius: 10px;
-            width:100%;
+            width: 100%;
             margin-right: 10px;
         }
 
@@ -392,6 +395,49 @@
         .learntitle {
             position: absolute;
             top: -60px;
+        }
+
+        .othertools {
+            border: #eb9672a9 2px solid;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            margin-right: 10px;
+        }
+
+        .othertools dd {
+            width:350px;
+            background: #eb967259;
+            padding: 10px;
+            margin:20px 5px;
+            border-radius: 30px;
+            width: 150px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            transition: 1s;
+            flex-wrap:nowrap;
+        }
+        .othertools dd:hover{
+            background:#eb967231;
+            transition: 1s;
+        }
+
+        .othertools dt {
+            color: #eb9772;
+            padding: 0 20px;
+            display: flex;
+            width: 100%;
+        }
+        .right{
+            justify-content: flex-start;
+        }
+        .othrttitle{
+            position: absolute;
+            top:-40px;
+        }
+        .wrap{
+            flex-wrap: wrap;
         }
 
         /* RWD================================================= */
@@ -633,7 +679,7 @@
                     </div>
                     <div class="box"></div>
                     <div class="tool word">
-                        <div class="tool1">
+                        <div class="tool1 word">
                             <ul>
                                 <li>Photo shop</li>
                                 <li>Illustrator</li>
@@ -650,35 +696,44 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="box2"></div>
                     <div class="othertools word">
+                            <h3 class="othrttitle">其他工具技能</h3>
                         <dl>
                             <dt>UX</dt>
-                            <dd>Persona</dd>
-                            <dd>Flowchart</dd>
-                            <dd>Functional map</dd>
-                            <dd>Wireframe</dd>
-                            <dd>Prototype</dd>
+                            <div class="flex right wrap">
+                                <dd>Persona</dd>
+                                <dd>Flowchart</dd>
+                                <dd style="letter-spacing: 1px;">Functional map</dd>
+                                <dd>Wireframe</dd>
+                                <dd>Prototype</dd>
+                            </div>
                             <dt>網頁相關</dt>
-                            <dd>Git</dd>
-                            <dd>Sourcetree</dd>
-                            <dd>codepen</dd>
-                            <dd>RWD切版</dd>
+                            <div class="flex right wrap">
+                                <dd>Git</dd>
+                                <dd>Sourcetree</dd>
+                                <dd>codepen</dd>
+                                <dd>RWD切版</dd>
+                            </div>
                             <dt>文書軟體</dt>
+                            <div class="flex right wrap">
+                            <div class="flex right ">
                             <dd>word</dd>
                             <dd>power point</dd>
-                        </dl>
                     </div>
-                    <div class="interest">
-                    </div>
+                    </dl>
                 </div>
-                <div class="portfolio">
-
-                </div>
-                <div class="contacts">
-
+                <div class="interest">
                 </div>
             </div>
+            <div class="portfolio">
+
+            </div>
+            <div class="contacts">
+
+            </div>
         </div>
+    </div>
     </div>
 
 
