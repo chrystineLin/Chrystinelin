@@ -175,7 +175,7 @@
         h3 {
             font-size: 1.5rem;
             color: #eb9772;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .word {
@@ -228,15 +228,147 @@
             top: 82%;
             left: 45%;
         }
+        #lightning {
+            opacity: 0;
+        }
 
-        .exp {}
+        .logo,
+        .intro,
+        .menu,
+        .content {
+            padding: 10px;
+        }
+
+        .content {
+            margin-top: 10px;
+        }
+
+        .menu-padding {
+            padding-top: 40px;
+        }
+
+        .content p {
+            margin-bottom: 20px;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+        }
+
+        .main {
+            padding: 0 400px;
+        }
+
+        .partTitle {
+            font-size: 3rem;
+            color: #eb9772;
+            font-weight: 800;
+            padding: 0 50px;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        .box {
+            width: 100%;
+            height: 170px;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 50px;
+        }
+
+        .photo {
+            width: 300px;
+            height: 300px;
+            background: url(images/photo.png) no-repeat;
+            background-size: contain;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .name p {
+            padding: 40px 0;
+            line-height: 30px;
+            letter-spacing: 3px;
+            color: #22202f;
+            font-size: 1.2rem;
+        }
+
+        .nameDetail {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        .padding20 {
+            padding: 20px 0;
+        }
+
+        .namectr {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        .top a {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background: url(images/top.png) no-repeat;
+            right: 40px;
+            bottom: 40px;
+        }
+
+        .top a:hover {
+            opacity: 0.6;
+            transition: 0.8s;
+        }
+
+        .hideUp {
+            top: -60px;
+        }
+        .tool{
+            display: flex;
+
+        }
+        .tool1{
+            background: #eb967257;
+            padding: 40px;
+            margin: 10px 0;
+            border-radius: 10px;
+            width:100%;
+            margin-right: 10px;
+        }
+
+        .exp {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .exptitle {
+            position: absolute;
+            top: -60px;
+        }
 
         .exp1 {
             background: #eb967257;
             padding: 40px;
             margin: 10px 0;
             border-radius: 10px;
-            width:300px;
+            width: 350px;
+            text-align: center;
         }
 
         .learn {
@@ -249,11 +381,19 @@
             text-align: center;
             align-items: center;
             justify-content: center;
+            position: relative;
         }
-        .flex{
-            display:flex;
+
+        .flex {
+            display: flex;
             justify-content: space-between;
         }
+
+        .learntitle {
+            position: absolute;
+            top: -60px;
+        }
+
         /* RWD================================================= */
 
         @media (max-width: 767px) {
@@ -367,116 +507,6 @@
         @media (min-width: 1200px) {}
 
         /* RWD================================================= */
-
-        #lightning {
-            opacity: 0;
-        }
-
-        .logo,
-        .intro,
-        .menu,
-        .content {
-            padding: 10px;
-        }
-
-        .content {
-            margin-top: 10px;
-        }
-
-        .menu-padding {
-            padding-top: 40px;
-        }
-
-        .content p {
-            margin-bottom: 20px;
-        }
-
-        .sticky {
-            position: fixed;
-            top: 0;
-        }
-
-        .main {
-            padding: 0 400px;
-        }
-
-        .partTitle {
-            font-size: 3rem;
-            color: #eb9772;
-            font-weight: 800;
-            padding: 0 50px;
-        }
-
-        .title {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-
-        .box {
-            width: 100%;
-            height: 170px;
-        }
-
-        .box2 {
-            width: 100%;
-            height: 50px;
-        }
-
-        .photo {
-            width: 300px;
-            height: 300px;
-            background: url(images/photo.png) no-repeat;
-            background-size: contain;
-        }
-
-        .name {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        .name p {
-            padding: 40px 0;
-            line-height: 30px;
-            letter-spacing: 3px;
-            color: #22202f;
-            font-size: 1.2rem;
-        }
-
-        .nameDetail {
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-        }
-
-        .padding20 {
-            padding: 20px 0;
-        }
-
-        .namectr {
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-        }
-
-        .top a {
-            position: fixed;
-            width: 100px;
-            height: 100px;
-            background: url(images/top.png) no-repeat;
-            right: 40px;
-            bottom: 40px;
-        }
-
-        .top a:hover {
-            opacity: 0.6;
-            transition: 0.8s;
-        }
-
-        .hideUp {
-            top: -60px;
-        }
     </style>
 
 
@@ -578,11 +608,11 @@
                     </div>
                 </div>
                 <div class="box"></div>
+                <div class="box2"></div>
                 <div class="other">
-                    <h3>經歷</h3>
-                    <div class="box2"></div>
                     <div class="flex">
                         <div class="exp">
+                            <h3 class="exptitle">經歷</h3>
                             <div class="exp1 word">
                                 美術編輯/礎石室內裝修有限公司<br>
                                 2017/11～2019/03
@@ -593,6 +623,7 @@
                             </div>
                         </div>
                         <div class="learn word">
+                            <h3 class="learntitle">職業訓練</h3>
                             資策會<br>
                             互動式網站UI/UX<br>
                             設計師就業養成班<br>
@@ -600,12 +631,42 @@
                             2019/03~2019/08
                         </div>
                     </div>
-                    <div class="tool">
-                        <div class="tool1"></div>
-                        <div class="tool1"></div>
+                    <div class="box"></div>
+                    <div class="tool word">
+                        <div class="tool1">
+                            <ul>
+                                <li>Photo shop</li>
+                                <li>Illustrator</li>
+                                <li>Adobe XD</li>
+                                <li>VScode</li>
+                            </ul>
+                        </div>
+                        <div class="tool1">
+                            <ul>
+                                <li>HTML/CSS</li>
+                                <li>jQuery</li>
+                                <li>平面排版</li>
+                                <li>插畫設計</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="othertools">
-
+                    <div class="othertools word">
+                        <dl>
+                            <dt>UX</dt>
+                            <dd>Persona</dd>
+                            <dd>Flowchart</dd>
+                            <dd>Functional map</dd>
+                            <dd>Wireframe</dd>
+                            <dd>Prototype</dd>
+                            <dt>網頁相關</dt>
+                            <dd>Git</dd>
+                            <dd>Sourcetree</dd>
+                            <dd>codepen</dd>
+                            <dd>RWD切版</dd>
+                            <dt>文書軟體</dt>
+                            <dd>word</dd>
+                            <dd>power point</dd>
+                        </dl>
                     </div>
                     <div class="interest">
                     </div>
