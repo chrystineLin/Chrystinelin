@@ -460,6 +460,37 @@
             width: 80%;
         }
 
+        .tabs{
+            display: flex;
+        }
+        .tabs li a{
+            width: 100%;
+            border:1px solid #eb9672d3;
+            color:#32435f;
+            padding: 10px;
+            margin: 20px 5px;
+            border-radius: 30px;
+            width: 150px;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+        .tabs li a:hover{
+            background: #e8c7b6;
+            color: rgb(255, 255, 255);
+        }
+
+        .tab_container{
+            width: 100%;
+            height: 600px;
+            padding: 50px 10px;
+        }
+        .port_container{
+            background: #ffffff7e;
+            padding: 40px;
+            border-radius: 10px;
+        }
+
 
         /* RWD================================================= */
 
@@ -651,7 +682,7 @@
             <ul>
                 <li><a id="home" href="#">Home</a></li>
                 <li><a id="about" href="#">About</a></li>
-                <li><a id="portfolio"href="#">portfolio</a></li>
+                <li><a id="portfolio" href="#">portfolio</a></li>
                 <li><a id="contact" href="#">contact</a></li>
             </ul>
         </div>
@@ -762,7 +793,39 @@
                     <div class="title">
                         <div class="partTitle">Portfolio</div>
                     </div>
+                    <div class="box2"></div>
+                    <div class="port_container">
+                        <ul class="tabs">
+                            <li class="active">
+                                <a href="#tab1">ALL</a>
+                            </li>
+                            <li>
+                                <a href="#tab2">UI/UX</a>
+                            </li>
+                            <li>
+                                <a href="#tab3">平面設計</a>
+                            </li>
+                        </ul>
+                        <div class="tab_container">
+                            <div id="tab1" class="tab_content" style="display: block; ">
 
+                                <p id="">多级菜单，理论上支持无限多的层级，文件结构非常简单的，具体的请看下面的内容</p>
+                            </div>
+
+                            <div id="tab2" class="tab_content" style="display: none; ">
+                                <h2>各种tab标签选项卡</h2>
+                                <h3><a href="http://www.freejs.net/article_tabbiaoqian_17.html">tab标签页面,ajax载入</a></h3>
+
+                                <p> tab标签，jquery ajax载入数据库的内容</p>
+                            </div>
+                            <div id="tab3" class="tab_content" style="display: none; ">
+                                    <h2>各种tab标签选项卡</h2>
+                                    <h3><a href="http://www.freejs.net/article_tabbiaoqian_17.html">tab标签页面,12121ajax载入</a></h3>
+    
+                                    <p> 0000tab标签，jquery ajax载入数据库的内容</p>
+                                </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="contacts">
 
@@ -864,6 +927,26 @@
                     $('#gotop').fadeOut();
                 }
             });
+        });
+
+        //tab------------------------------------------------------
+        $(document).ready(function () {
+
+            //默认active 
+            $(".tab_content").hide(); //隐藏全部的tab菜单内容
+            $("ul.tabs li:first").addClass("active").show(); //对第一个li标签添加class="active属性"  
+            $(".tab_content:first").show(); //显示第一个tab内容  
+
+            //点击事件 
+            $("ul.tabs li").click(function () {
+                $("ul.tabs li").removeClass("active"); //移除class="active"属性
+                $(this).addClass("active"); //添加class="active"到选择标签中 
+                $(".tab_content").hide(); //隐藏全部标签内容  
+                var activeTab = $(this).find("a").attr("href"); //找到所属属性值来识别活跃选项卡和内容  
+                $(activeTab).fadeIn(); //使内容消失 
+                return false;
+            });
+
         });
 
     </script>
