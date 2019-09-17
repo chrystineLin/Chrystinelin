@@ -407,20 +407,21 @@
         }
 
         .othertools dd {
-            width:350px;
+            width: 350px;
             background: #eb967259;
             padding: 10px;
-            margin:20px 5px;
+            margin: 20px 5px;
             border-radius: 30px;
             width: 150px;
             display: flex;
             text-align: center;
             justify-content: center;
             transition: 1s;
-            flex-wrap:nowrap;
+            flex-wrap: nowrap;
         }
-        .othertools dd:hover{
-            background:#eb967231;
+
+        .othertools dd:hover {
+            background: #eb967231;
             transition: 1s;
         }
 
@@ -430,19 +431,35 @@
             display: flex;
             width: 100%;
         }
-        .right{
+
+        .right {
             justify-content: flex-start;
         }
-        .othrttitle{
+
+        .othrttitle {
             position: absolute;
-            top:-40px;
+            top: -40px;
         }
-        .wrap{
+
+        .wrap {
             flex-wrap: wrap;
         }
-        .jc{
-            justify-self: center;
+
+        .interest {
+            position: relative;
+            display: flex;
         }
+
+        .interest ul {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .interest ul img {
+            width: 80%;
+        }
+
 
         /* RWD================================================= */
 
@@ -634,8 +651,8 @@
             <ul>
                 <li><a id="home" href="#">Home</a></li>
                 <li><a id="about" href="#">About</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact</a></li>
+                <li><a id="portfolio"href="#">portfolio</a></li>
+                <li><a id="contact" href="#">contact</a></li>
             </ul>
         </div>
         <div class="box" id="main02"></div>
@@ -684,7 +701,7 @@
                     <div class="box"></div>
                     <div class="tool word">
                         <div class="tool1 word">
-                                <h3 class="othrttitle jc">使用工具</h3>
+                            <h3 class="othrttitle jc">使用工具</h3>
                             <ul>
                                 <li>Photo shop</li>
                                 <li>Illustrator</li>
@@ -693,7 +710,7 @@
                             </ul>
                         </div>
                         <div class="tool1">
-                                <h3 class="othrttitle jc">技能專長</h3>
+                            <h3 class="othrttitle jc">技能專長</h3>
                             <ul>
                                 <li>HTML/CSS</li>
                                 <li>jQuery</li>
@@ -704,7 +721,7 @@
                     </div>
                     <div class="box2"></div>
                     <div class="othertools word">
-                            <h3 class="othrttitle">其他工具技能</h3>
+                        <h3 class="othrttitle">其他工具技能</h3>
                         <dl>
                             <dt>UX</dt>
                             <div class="flex right wrap">
@@ -723,23 +740,35 @@
                             </div>
                             <dt>文書軟體</dt>
                             <div class="flex right wrap">
-                            <div class="flex right ">
-                            <dd>word</dd>
-                            <dd>power point</dd>
+                                <div class="flex right ">
+                                    <dd>word</dd>
+                                    <dd>power point</dd>
+                                </div>
+                        </dl>
                     </div>
-                    </dl>
+                    <div class="box"></div>
+                    <div class="interest">
+                        <h3 class="othrttitle" style="left:5.6%">興趣</h3>
+                        <ul>
+                            <li><img src="images/01-11.png" alt=""></li>
+                            <li><img src="images/01-12.png" alt=""></li>
+                            <li><img src="images/01-13.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="interest">
+                <div id="main03" class="box"></div>
+                <div class="box2"></div>
+                <div class="portfolio">
+                    <div class="title">
+                        <div class="partTitle">Portfolio</div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="portfolio">
+                <div class="contacts">
 
-            </div>
-            <div class="contacts">
-
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
 
@@ -764,6 +793,16 @@
             $("#home").click(function () {
                 $('html, body').animate({
                     scrollTop: $("#main01").offset().top
+                }, 1000);
+            });
+            $("#portfolio").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#main03").offset().top
+                }, 1000);
+            });
+            $("#contact").click(function () {
+                $('html, body').animate({
+                    scrollTop: $("#main04").offset().top
                 }, 1000);
             });
         });
