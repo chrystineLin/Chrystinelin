@@ -283,6 +283,13 @@
             width: 100%;
             height: 50px;
         }
+        .box3{
+            width:225px;
+            height: 300px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 5px;
+        }
 
         .photo {
             width: 300px;
@@ -484,8 +491,13 @@
 
         .tab_container {
             width: 100%;
-            height: 600px;
             padding: 50px 10px;
+            flex-wrap: wrap;
+        }
+        .tab_content{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .port_container {
@@ -562,6 +574,7 @@
         .contacts_li a {
             margin-top: 30px;
         }
+
 
 
 
@@ -755,8 +768,8 @@
             <ul>
                 <li><a id="home" href="#">Home</a></li>
                 <li><a id="about" href="#">About</a></li>
-                <li><a id="portfolio" href="#">portfolio</a></li>
-                <li><a id="contact" href="#">contact</a></li>
+                <li><a id="portfolio" href="#">Portfolio</a></li>
+                <li><a id="contact" href="#">Contact</a></li>
             </ul>
         </div>
         <div class="box" id="main02"></div>
@@ -880,23 +893,40 @@
                             </li>
                         </ul>
                         <div class="tab_container">
-                            <div id="tab1" class="tab_content" style="display: block; ">
+                            <div id="tab1" class="tab_content">
 
-                                <p id="">多级菜单，理论上支持无限多的层级，文件结构非常简单的，具体的请看下面的内容</p>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
+                               <div class="box3"></div>
                             </div>
 
-                            <div id="tab2" class="tab_content" style="display: none; ">
+                            <div id="tab2" class="tab_content">
 
-                                <h3><a href="http://www.freejs.net/article_tabbiaoqian_17.html">tab标签页面,ajax载入</a></h3>
-
-                                <p> tab标签，jquery ajax载入数据库的内容</p>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
                             </div>
-                            <div id="tab3" class="tab_content" style="display: none; ">
-
-                                <h3><a href="http://www.freejs.net/article_tabbiaoqian_17.html">tab标签页面,12121ajax载入</a>
-                                </h3>
-
-                                <p> 0000tab标签，jquery ajax载入数据库的内容</p>
+                            <div id="tab3" class="tab_content">
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
                             </div>
                         </div>
                     </div>
@@ -923,7 +953,7 @@
 
         </div>
     </div>
-    .l
+    .load
 
 
     <script src="js/TweenMax.min.js"></script>
@@ -1051,15 +1081,7 @@
         };
 
         //loading-------------------------------------------------
-        function myload() {
-  //做什麼事
-}
-window.onload = myload;
-       
-        function myload() {
-        $(".load").fadeOut(3000);
-    }
-　　window.onload = myload;
+
     </script>
 </body>
 
