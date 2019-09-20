@@ -9,7 +9,8 @@
     <script src="js/ScrollMagic.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <link rel=stylesheet type="text/css" href="reset.css">
-    
+    <link rel="stylesheet" href="js/jquery.fancybox.min.css">
+
 
 
     <style>
@@ -283,12 +284,20 @@
             width: 100%;
             height: 50px;
         }
-        .box3{
-            width:225px;
+
+        .box3 {
+            width: 225px;
             height: 300px;
             background: #fff;
             border-radius: 10px;
             margin: 5px;
+            overflow: hidden;
+        }
+
+        .box3 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .photo {
@@ -494,7 +503,8 @@
             padding: 50px 10px;
             flex-wrap: wrap;
         }
-        .tab_content{
+
+        .tab_content {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
@@ -886,7 +896,7 @@
                                 <a href="#tab1">ALL</a>
                             </li>
                             <li>
-                                <a href="#tab2">UI/UX</a>
+                                <a href="#tab2">UI設計</a>
                             </li>
                             <li>
                                 <a href="#tab3">平面設計</a>
@@ -894,19 +904,72 @@
                         </ul>
                         <div class="tab_container">
                             <div id="tab1" class="tab_content">
-
-                               <div class="box3"></div>
-                               <div class="box3"></div>
-                               <div class="box3"></div>
-                               <div class="box3"></div>
-                               <div class="box3"></div>
-                               <div class="box3"></div>
-                               <div class="box3"></div>
-                               <div class="box3"></div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/mainwork01.jpg"><img
+                                            src="images/mainwork01.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/mainwork01-1.png"><img
+                                            src="images/mainwork01-1.png"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork02.jpg"><img
+                                            src="images/mainwork02.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork02-1.jpg"><img
+                                            src="images/mainwork02-1.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork03.jpg"><img
+                                            src="images/mainwork03.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork03-1.png"><img
+                                            src="images/mainwork03-1.png"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork04.jpg"><img
+                                            src="images/mainwork04.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork05.jpg"><img
+                                            src="images/mainwork05.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork06.jpg"><img
+                                            src="images/mainwork06.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/mainwork06-1.png"><img
+                                            src="images/mainwork06-1.png"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/work01.png"><img
+                                            src="images/work01.png"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/work02.png"><img
+                                            src="images/work02.png"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/work03.png"><img
+                                            src="images/work03.png"></a>
+                                </div>
+                                <div class="box3">
+                                        <a data-fancybox="gallery" href="images/work04.png"><img
+                                            src="images/work04.png"></a>
+                                </div>
                             </div>
 
                             <div id="tab2" class="tab_content">
 
+                                <div class="box3">
+                                </div>
+                                <div class="box3">
+                                </div>
+                                <div class="box3"></div>
+                                <div class="box3"></div>
                                 <div class="box3"></div>
                                 <div class="box3"></div>
                                 <div class="box3"></div>
@@ -957,8 +1020,34 @@
 
 
     <script src="js/TweenMax.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
 
     <script>
+
+        // 光箱------------------------------------------
+        $(document).ready(function () {
+
+            /* This is basic - uses default settings */
+
+            $("a#single_image").fancybox();
+
+            /* Using custom settings */
+
+            $("a#inline").fancybox({
+                'hideOnContentClick': true
+            });
+
+            /* Apply fancybox to multiple items */
+
+            $("a.group").fancybox({
+                'transitionIn': 'elastic',
+                'transitionOut': 'elastic',
+                'speedIn': 600,
+                'speedOut': 200,
+                'overlayShow': false
+            });
+
+        });
         // init controller scrollMagic驅動---------------
         var controller = new ScrollMagic.Controller();
 
