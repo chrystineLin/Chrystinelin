@@ -260,7 +260,9 @@
         }
 
         .main {
-            padding: 0 400px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px 0 30px;
         }
 
         .partTitle {
@@ -286,7 +288,7 @@
         }
 
         .box3 {
-            width: 225px;
+            width: 355px;
             height: 300px;
             background: #fff;
             border-radius: 10px;
@@ -294,7 +296,8 @@
             overflow: hidden;
             opacity: 0.5;
         }
-        .box3:hover{
+
+        .box3:hover {
             opacity: 1;
             transition: 0.5s;
         }
@@ -350,6 +353,7 @@
             background: url(images/top.png) no-repeat;
             right: 40px;
             bottom: 40px;
+            z-index: 1000;
         }
 
         .top a:hover {
@@ -507,12 +511,14 @@
             width: 100%;
             padding: 50px 10px;
             flex-wrap: wrap;
+
         }
 
         .tab_content {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .port_container {
@@ -691,6 +697,10 @@
             .mysvg {
                 width: 100%;
             }
+
+            .box3 {
+                width: 100%;
+            }
         }
 
         @media (min-width: 768px) and (max-width: 979px) {
@@ -698,6 +708,19 @@
                 width: 50px;
                 height: 50px;
 
+            }
+
+            .main {
+                max-width: 800px;
+                padding: 0 50px;
+            }
+
+            .box3 {
+                width: 80%;
+            }
+
+            .top a {
+                bottom: 100px;
             }
         }
 
@@ -918,123 +941,109 @@
                                             src="images/mainwork01-1.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork02.jpg"><img
+                                    <a data-fancybox="gallery" href="images/mainwork02.jpg"><img
                                             src="images/mainwork02.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork02-1.jpg"><img
+                                    <a data-fancybox="gallery" href="images/mainwork02-1.jpg"><img
                                             src="images/mainwork02-1.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork03.jpg"><img
+                                    <a data-fancybox="gallery" href="images/mainwork03.jpg"><img
                                             src="images/mainwork03.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork03-1.png"><img
+                                    <a data-fancybox="gallery" href="images/mainwork03-1.png"><img
                                             src="images/mainwork03-1.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork04.jpg"><img
+                                    <a data-fancybox="gallery" href="images/mainwork04.jpg"><img
                                             src="images/mainwork04.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork05.jpg"><img
+                                    <a data-fancybox="gallery" href="images/mainwork05.jpg"><img
                                             src="images/mainwork05.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork06.jpg"><img
+                                    <a data-fancybox="gallery" href="images/mainwork06.jpg"><img
                                             src="images/mainwork06.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/mainwork06-1.png"><img
+                                    <a data-fancybox="gallery" href="images/mainwork06-1.png"><img
                                             src="images/mainwork06-1.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/work01.png"><img
+                                    <a data-fancybox="gallery" href="images/work01.png"><img
                                             src="images/work01.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/work02.png"><img
+                                    <a data-fancybox="gallery" href="images/work02.png"><img
                                             src="images/work02.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/work03.png"><img
+                                    <a data-fancybox="gallery" href="images/work03.png"><img
                                             src="images/work03.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/work04.png"><img
+                                    <a data-fancybox="gallery" href="images/work04.png"><img
                                             src="images/work04.png"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/work05.jpg"><img
+                                    <a data-fancybox="gallery" href="images/work05.jpg"><img
                                             src="images/work05.jpg"></a>
                                 </div>
                                 <div class="box3">
-                                        <a data-fancybox="gallery" href="images/work06.jpg"><img
+                                    <a data-fancybox="gallery" href="images/work06.jpg"><img
                                             src="images/work06.jpg"></a>
                                 </div>
                             </div>
 
                             <div id="tab2" class="tab_content">
 
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/UX.png"><img
-                                                src="images/UX.png"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/UX1.png"><img
-                                                src="images/UX1.png"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/UX2.png"><img
-                                                src="images/UX2.png"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/UX3.png"><img
-                                                src="images/UX3.png"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/UX4.png"><img
-                                                src="images/UX4.png"></a>
-                                    </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/UX.png"><img src="images/UX.png"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/UX1.png"><img src="images/UX1.png"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/UX2.png"><img src="images/UX2.png"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/UX3.png"><img src="images/UX3.png"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/UX4.png"><img src="images/UX4.png"></a>
+                                </div>
                             </div>
                             <div id="tab3" class="tab_content">
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D1.jpg"><img
-                                                src="images/D1.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D2.jpg"><img
-                                                src="images/D2.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D3.jpg"><img
-                                                src="images/D3.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D4.jpg"><img
-                                                src="images/D4.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D5.jpg"><img
-                                                src="images/D5.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D6.jpg"><img
-                                                src="images/D6.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D7.png"><img
-                                                src="images/D7.png"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D8.jpg"><img
-                                                src="images/D8.jpg"></a>
-                                    </div>
-                                    <div class="box3">
-                                            <a data-fancybox="gallery" href="images/D9.jpg"><img
-                                                src="images/D9.jpg"></a>
-                                    </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D1.jpg"><img src="images/D1.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D2.jpg"><img src="images/D2.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D3.jpg"><img src="images/D3.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D4.jpg"><img src="images/D4.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D5.jpg"><img src="images/D5.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D6.jpg"><img src="images/D6.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D7.png"><img src="images/D7.png"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D8.jpg"><img src="images/D8.jpg"></a>
+                                </div>
+                                <div class="box3">
+                                    <a data-fancybox="gallery" href="images/D9.jpg"><img src="images/D9.jpg"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1061,7 +1070,7 @@
 
         </div>
     </div>
-    .load
+
 
 
     <script src="js/TweenMax.min.js"></script>
