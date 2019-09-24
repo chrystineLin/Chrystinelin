@@ -479,7 +479,7 @@
         .interest ul {
             width: 60%;
             display: flex;
-            justify-content: space-between;
+            /* justify-content: space-between; */
         }
 
         .interest ul img {
@@ -518,7 +518,7 @@
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            /* justify-content: center; */
         }
 
         .port_container {
@@ -602,6 +602,11 @@
         /* RWD================================================= */
 
         @media (max-width: 767px) {
+            .name {
+            flex-direction:column-reverse;
+            width: 100%;
+            align-items:center;
+        }
             .container {
                 width: 100%;
                 position: static;
@@ -671,16 +676,56 @@
             .down>a {
                 width: 50px;
                 height: 50px;
+                z-index: 1000;
 
             }
 
             .mysvg {
                 width: 150%;
             }
-
+            .top a {
+                bottom: 60px;
+            }
+            .title {
+            flex-direction: row;
+            justify-content: center;
+        }
+        .otherthing{
+            flex-direction: column;
+            align-items: center;
+        }
+        .learn{
+            margin-top: 80px;
+        }
+        .tool1{
+            text-align: center;
+            justify-content: center;
+        }
+        .interest ul{
+            width: 100%;
+        }
+        .tabs{
+            justify-content: center;
+        }
+        .othertools{
+            margin-right: 0px;
+        }
+        .tab_content {
+            justify-content: center;
         }
 
+        }
         @media (max-width: 480px) {
+            .othertools dd{
+                width: 40%;
+                margin: 10px 3px;
+                padding: 5px;
+                letter-spacing:0px;
+                align-items: center;
+            }
+            .othrttitle{
+            left:30%;
+        }
             h2 {
                 margin-top: 60px;
             }
@@ -701,6 +746,27 @@
             .box3 {
                 width: 100%;
             }
+            .top a {
+                bottom: 100px;
+            }
+            .exp1{
+                width: 80%;
+            }
+            .tool1{
+                padding: 30px;
+            }
+            .tabs li a{
+                padding:5px;
+            }
+            .contacts_con ul li{
+                height: 200px;
+                padding:10px;
+            }
+            .box4{
+                height: 100px;
+                width: 100%;
+            }
+
         }
 
         @media (min-width: 768px) and (max-width: 979px) {
@@ -717,10 +783,6 @@
 
             .box3 {
                 width: 80%;
-            }
-
-            .top a {
-                bottom: 100px;
             }
         }
 
@@ -832,7 +894,7 @@
                 <div class="box"></div>
                 <div class="box2"></div>
                 <div class="other">
-                    <div class="flex">
+                    <div class="otherthing flex">
                         <div class="exp">
                             <h3 class="exptitle">經歷</h3>
                             <div class="exp1 word">
@@ -882,9 +944,9 @@
                             <div class="flex right wrap">
                                 <dd>Persona</dd>
                                 <dd>Flowchart</dd>
-                                <dd style="letter-spacing: 1px;">Functional map</dd>
                                 <dd>Wireframe</dd>
                                 <dd>Prototype</dd>
+                                <dd style="letter-spacing: 1px;">Functional map</dd>
                             </div>
                             <dt>網頁相關</dt>
                             <div class="flex right wrap">
@@ -895,9 +957,8 @@
                             </div>
                             <dt>文書軟體</dt>
                             <div class="flex right wrap">
-                                <div class="flex right ">
                                     <dd>word</dd>
-                                    <dd>power point</dd>
+                                    <dd style="letter-spacing: 1px;">power point</dd>
                                 </div>
                         </dl>
                     </div>
@@ -1067,6 +1128,7 @@
                     </li>
                 </ul>
             </div>
+            <div class="box4"></div>
 
         </div>
     </div>
