@@ -179,6 +179,11 @@
             color: #eb9772;
             font-weight: 500;
         }
+        .hh {
+            font-size: 1.5rem;
+            color: #eb9772;
+            font-weight: 500;
+        }
 
         .word {
             line-height: 30px;
@@ -462,9 +467,12 @@
             justify-content: flex-start;
         }
 
-        .othrttitle {
+        .othrttitle, .othrttitle2{
             position: absolute;
             top: -40px;
+        }
+        .othertitle1{
+            display: none;
         }
 
         .wrap {
@@ -723,9 +731,27 @@
         .tab_content {
             justify-content: center;
         }
+        .othrttitle2{
+                display: none;
+            }
+            .othertitle1 {
+                display: flex;
+                justify-content: center;
+                margin:10px auto;
+            }
 
         }
         @media (max-width: 480px) {
+            .partTitle{
+                font-size: 2rem;
+            }
+            h1{
+                font-size: 1.7rem;
+            }
+            .word{
+                letter-spacing: 1px;
+                font-size: 1rem;
+            }
             .othertools dd{
                 width: 40%;
                 margin: 10px 3px;
@@ -733,9 +759,7 @@
                 letter-spacing:0px;
                 align-items: center;
             }
-            .othrttitle{
-            left:30%;
-        }
+            
             h2 {
                 margin-top: 60px;
             }
@@ -769,14 +793,25 @@
                 padding:5px;
             }
             .contacts_con ul li{
+                font-size: 1rem;
                 height: 200px;
                 padding:10px;
+                width: 40%;
             }
             .box4{
                 height: 100px;
                 width: 100%;
             }
-
+            .tabs li a{
+                margin: 2px;
+                font-size: 0.9rem;
+            }
+            .hh{
+                font-size: 1rem;
+            }
+            .btn{
+                width: 60%;
+            }
         }
 
         @media (min-width: 768px) and (max-width: 979px) {
@@ -947,8 +982,9 @@
                         </div>
                     </div>
                     <div class="box2"></div>
+                    <h3 class="othertitle1">其他工具技能</h3>
                     <div class="othertools word">
-                        <h3 class="othrttitle">其他工具技能</h3>
+                        <h3 class="othrttitle2">其他工具技能</h3>
                         <dl>
                             <dt>UX</dt>
                             <div class="flex right wrap">
@@ -1129,11 +1165,11 @@
             <div class="contacts_con">
                 <ul>
                     <li><img src="images/mail-black-envelope-symbol.png" alt="">
-                        <h3 class="contacts_li" id="copyWeChat">y407112002<br>@gmail.com</h3>
+                        <div class="hh contacts_li" id="copyWeChat">y407112002<br>@gmail.com</div>
                         <a onclick="copyFn('copyWeChat')" class="btn">copy</a>
                     </li>
                     <li><img src="images/phone-call-auricular-symbol-in-black.png" alt="">
-                        <h3 class="contacts_li" id="copyWeChat1">+886<br>983012599</h3>
+                        <div class="hh contacts_li" id="copyWeChat1">+886<br>983012599</div>
                         <a onclick="copyFn('copyWeChat1')" class="btn">copy</a>
                     </li>
                 </ul>
